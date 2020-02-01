@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gitlab-runner
+  namespace: ci
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: gitlab-runner
+  template:
+    metadata:
+      labels:
+        name: gitlab-runner
+    spec:
+      imagePullSecrets:
+        - name: regsecret
+      containers:
+      - image: $your_registry/gitlab-runner
+        imagePullPolicy: Always
+        name: gitlab-runner
