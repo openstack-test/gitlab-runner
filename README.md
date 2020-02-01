@@ -1,5 +1,4 @@
-# k8s-gitlabrunner
-kubernetes部署gitlab runner
+# 如何使用
 
 ## 构建镜像
 ```
