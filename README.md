@@ -8,6 +8,7 @@ docker build -t $your_registry/gitlab-runner .
 
 ## 部署镜像
 ```
+kubectl apply -f clusterrolebind.yaml
 kubectl apply -f deployment.yaml
 ```
 
